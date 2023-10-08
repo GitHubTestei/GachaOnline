@@ -248,11 +248,11 @@ end
 })
 
 local Button = MainTab:CreateButton({
-   Name = "Randomize Presets",
+   Name = "Randomize Presets (1-50)",
    Callback = function()
     while true do
   local args={
-    [1]=math.random(1,21)
+    [1]=math.random(1,50)
   }
   
   game:GetService("ReplicatedStorage").ServerPresetChange:FireServer(unpack(args))
