@@ -161,6 +161,123 @@ end
 })
 
 local Button = MainTab:CreateButton({
+   Name = "Randomize Shirt",
+   Callback = function()
+      while true do
+  local args={
+    [1]="Shirt",
+    [2]=math.random(1,97)
+  }
+  
+  game:GetService("ReplicatedStorage").ChangeAssetEvent:FireServer(unpack(args))
+  wait(0.0001)
+end
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Randomize Pants",
+   Callback = function()
+      while true do
+  local args={
+    [1]={
+      ["Pants"]=math.random(1,100),
+      ["Pants1"]=math.random(1,100)
+    }
+  }
+  
+  game:GetService("ReplicatedStorage").BulkChangeAssetEvent:FireServer(unpack(args))
+  wait(0.0001)
+end
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Randomize Sleeves",
+   Callback = function()
+      while true do
+  local args={
+    [1]={
+      ["Sleeve"]=math.random(1,100),
+      ["Sleeve1"]=math.random(1,100)
+    }
+  }
+  
+  game:GetService("ReplicatedStorage").BulkChangeAssetEvent:FireServer(unpack(args))
+  wait(0.0001)
+end
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Randomize Props",
+   Callback = function()
+      while true do
+  local args={
+    [1]="Prop",
+    [2]=math.random(1,200)
+  }
+  
+  game:GetService("ReplicatedStorage").BulkChangeAssetEvent:FireServer(unpack(args))
+  wait(0.0001)
+end
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Randomize Belt",
+   Callback = function()
+      while true do
+  local args={
+    [1]="Belt",
+    [2]=math.random(1,200)
+  }
+  
+  game:GetService("ReplicatedStorage").BulkChangeAssetEvent:FireServer(unpack(args))
+  wait(0.0001)
+end
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Randomize shirt color",
+   Callback = function()
+      while true do
+  local args={
+    [1]="ShirtBotp",
+    [2]={
+      ["B"]=math.random(0.1000000,1),
+      ["G"]=math.random(0.1000000,1),
+      ["R"]=math.random(0.1000000,1)
+    }
+  }
+  
+  game:GetService("ReplicatedStorage").ServerUpdateColor:FireServer(unpack(args))
+  wait(0.0001)
+end
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Randomize pants color",
+   Callback = function()
+      while true do
+  local args={
+    [1]="PantsThighp",
+    [2]={
+      ["B"]=math.random(0.1000000,1),
+      ["G"]=math.random(0.1000000,1),
+      ["R"]=math.random(0.1000000,1)
+    }
+  }
+  
+  game:GetService("ReplicatedStorage").ServerUpdateColor:FireServer(unpack(args))
+  wait(0.0001)
+end
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "Nazi sign in chat (No ban)",
    Callback = function()
      local args={
