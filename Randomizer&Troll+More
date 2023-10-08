@@ -175,7 +175,7 @@ local Button = MainTab:CreateButton({
  }
  
  game:GetService("ReplicatedStorage").ServerFilterText:InvokeServer(unpack(args))
- wait(0.1)
+ wait(0.01)
 end
    end,
 })
