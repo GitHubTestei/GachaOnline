@@ -99,7 +99,7 @@ local Button = MainTab:CreateButton({
     while true do
  local args={
    [1]="RPName",
-   [2]="someguy -_________-👑"
+   [2]="someguy 🛠️ |  -_________-👑"
  }
  
  game:GetService("ReplicatedStorage").ServerFilterText:InvokeServer(unpack(args))
@@ -107,7 +107,7 @@ local Button = MainTab:CreateButton({
  
  local args={
    [1]="RPName",
-   [2]="someguy -M_______-👑"
+   [2]="someguy 🛠️ |  -M_______-👑"
  }
  
  game:GetService("ReplicatedStorage").ServerFilterText:InvokeServer(unpack(args))
@@ -115,7 +115,7 @@ local Button = MainTab:CreateButton({
  
  local args={
    [1]="RPName",
-   [2]="someguy -MO_______-👑"
+   [2]="someguy 🛠️ |  -MO_______-👑"
  }
  
  game:GetService("ReplicatedStorage").ServerFilterText:InvokeServer(unpack(args))
@@ -123,7 +123,7 @@ local Button = MainTab:CreateButton({
  
  local args={
    [1]="RPName",
-   [2]="someguy -MOD______-👑"
+   [2]="someguy 🛠️ |  -MOD______-👑"
  }
  
  game:GetService("ReplicatedStorage").ServerFilterText:InvokeServer(unpack(args))
@@ -131,7 +131,7 @@ local Button = MainTab:CreateButton({
  
  local args={
    [1]="RPName",
-   [2]="someguy -MODE_____-👑"
+   [2]="someguy 🛠️ |  -MODE_____-👑"
  }
  
  game:GetService("ReplicatedStorage").ServerFilterText:InvokeServer(unpack(args))
@@ -139,7 +139,7 @@ local Button = MainTab:CreateButton({
  
  local args={
    [1]="RPName",
-   [2]="someguy -MODER____-👑"
+   [2]="someguy 🛠️ |  -MODER____-👑"
  }
  
  game:GetService("ReplicatedStorage").ServerFilterText:InvokeServer(unpack(args))
@@ -147,7 +147,7 @@ local Button = MainTab:CreateButton({
  
  local args={
    [1]="RPName",
-   [2]="someguy -MODERA___-👑"
+   [2]="someguy 🛠️ |  -MODERA___-👑"
  }
  
  game:GetService("ReplicatedStorage").ServerFilterText:InvokeServer(unpack(args))
@@ -155,7 +155,7 @@ local Button = MainTab:CreateButton({
  
  local args={
    [1]="RPName",
-   [2]="someguy -MODERAT__-👑"
+   [2]="someguy 🛠️ |  -MODERAT__-👑"
  }
  
  game:GetService("ReplicatedStorage").ServerFilterText:InvokeServer(unpack(args))
@@ -163,7 +163,7 @@ local Button = MainTab:CreateButton({
  
  local args={
    [1]="RPName",
-   [2]="someguy -MODERATO_-👑"
+   [2]="someguy 🛠️ |  -MODERATO_-👑"
  }
  
  game:GetService("ReplicatedStorage").ServerFilterText:InvokeServer(unpack(args))
@@ -171,7 +171,7 @@ local Button = MainTab:CreateButton({
  
  local args={
    [1]="RPName",
-   [2]="someguy -MODERATOR-👑"
+   [2]="someguy 🛠️ |  -MODERATOR-👑"
  }
  
  game:GetService("ReplicatedStorage").ServerFilterText:InvokeServer(unpack(args))
