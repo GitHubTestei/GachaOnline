@@ -8,7 +8,7 @@ wait(2.5)
   
   
   local args={
-    [1]="[ Randomizer script by 12slash25 on scriptblox",
+    [1]="[ Randomizer and more script by 12slash25 on scriptblox",
     [2]="All"
   }
   
@@ -94,6 +94,58 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
+   Name = "GACHA ONLINE CHAT ERROR (EVERYONE SEES) (OP)",
+   Callback = function()
+    local args={
+    [1]=" ",
+    [2]="All"
+  }
+  
+  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+  
+  local args={
+    [1]="Loading the system chat/lag error..",
+    [2]="All"
+  }
+  
+  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+  
+  local args={
+    [1]=" ",
+    [2]="All"
+  }
+  
+  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+  wait(2)
+  local args={
+    [1]=" ",
+    [2]="All"
+  }
+  
+  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+  
+  local args={
+    [1]=" ",
+    [2]="All"
+  }
+  
+  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+  wait(2)
+  
+  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+  
+  local args={
+    [1]="Chat error successful!",
+    [2]="All"
+  }
+  
+  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+  wait(2)
+  
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "Credits (please activate, just shows creator :) )",
    Callback = function()
      while true do
@@ -105,6 +157,25 @@ local Button = MainTab:CreateButton({
   game:GetService("ReplicatedStorage").ServerFilterText:InvokeServer(unpack(args))
   wait(0.00001)
 end
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Spin (No collide)",
+   Callback = function()
+     power = 1000
+
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end)
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power,0,power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
    end,
 })
 
@@ -231,6 +302,30 @@ local Button = MainTab:CreateButton({
   
   game:GetService("ReplicatedStorage").ServerAnimUpdate:FireServer(unpack(args))
   wait(0.01)
+end
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Spam Sit",
+   Callback = function()
+    while true do
+  local args={
+    [1]="sit1",
+    [2]=true
+  }
+  
+  game:GetService("ReplicatedStorage").ServerAnimUpdate:FireServer(unpack(args))
+  wait(0.0001)
+  
+  
+  local args={
+    [1]="sit1",
+    [2]=false
+  }
+  
+  game:GetService("ReplicatedStorage").ServerAnimUpdate:FireServer(unpack(args))
+  wait(0.0001)
 end
    end,
 })
