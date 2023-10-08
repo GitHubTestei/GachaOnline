@@ -1,6 +1,6 @@
 wait(2.5)
   local args={
-    [1]="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _",
+    [1]="🅶 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _",
     [2]="All"
   }
   
@@ -8,35 +8,35 @@ wait(2.5)
   
   
   local args={
-    [1]="[ Randomizer and more script by 12slash25 on scriptblox",
+    [1]="[🅰 Gacha Online Troll script by 12slash25 on scriptblox",
     [2]="All"
   }
   
   game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
   
     local args={
-    [1]="[ Some randomizers hidden on client to prevent lag.",
+    [1]="[🅲 Some randomizers hidden on client to prevent lag.",
     [2]="All"
   }
   
   game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
   
     local args={
-    [1]="[ Use an alt to see all features from a different client.",
+    [1]="[🅷 Use an alt to see all features from a different client.",
     [2]="All"
   }
   
   game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
   
     local args={
-    [1]="[ enjoy!",
+    [1]="[🅰 enjoy!",
     [2]="All"
   }
   
   game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
   
     local args={
-    [1]="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _",
+    [1]="_ _ _ _ _ _ 🤖 _ _ _ _ _ _ _ _ _",
     [2]="All"
   }
   
@@ -161,6 +161,62 @@ end
 })
 
 local Button = MainTab:CreateButton({
+   Name = "Nazi sign in chat (No ban)",
+   Callback = function()
+     local args={
+    [1]="⚫⚫⚫⚫🔴🔴⚫:) WE",
+    [2]="All"
+  }
+  
+  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+  
+  
+  local args={
+    [1]="🔴🔴🔴⚫🔴🔴⚫R LOVE",
+    [2]="All"
+  }
+  
+  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
+ local args={
+    [1]="🔴🔴🔴⚫🔴🔴⚫E THESE",
+    [2]="All"
+  }
+  
+  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
+  local args={
+    [1]="⚫⚫⚫⚫⚫⚫⚫G SYMBOLS",
+    [2]="All"
+  }
+  
+  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
+ local args={
+    [1]="⚫🔴🔴⚫🔴🔴🔴G SO",
+    [2]="All"
+  }
+  
+  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
+ local args={
+    [1]="⚫🔴🔴⚫🔴🔴🔴I MUCH",
+    [2]="All"
+  }
+  
+  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
+  local args={
+    [1]="⚫🔴🔴⚫⚫⚫⚫N :)",
+    [2]="All"
+  }
+  
+  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "Spin (No collide)",
    Callback = function()
      power = 1000
@@ -248,7 +304,7 @@ end
 })
 
 local Button = MainTab:CreateButton({
-   Name = "Randomize Presets (1-50)",
+   Name = "Randomize Presets",
    Callback = function()
     while true do
   local args={
