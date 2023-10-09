@@ -360,6 +360,55 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
+   Name = "THROW SPOONS AT RANDOM PEOPLE LOL",
+   Callback = function()
+    					while true do
+ local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+    local args = {
+        [1] = player.UserId,
+        [2] = "ThrowInteraction",
+        [3] = "ThrowInteractionInitialRequest",
+        [4] = {
+            ["mapC"] = "Epic_Park",
+            ["catchingPlayer"] = player.UserId,
+            ["throwingPlayer"] = 5101959777,
+            ["throwDistance"] = 4.142333166503906,
+            ["propId"] = 12339
+        }
+    }
+
+    game:GetService("ReplicatedStorage").AskRequestPlayerInteraction:FireServer(unpack(args))
+    				wait(0.001)
+end
+ end
+   end,
+})
+
+					while true do
+ local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+    local args = {
+        [1] = player.UserId,
+        [2] = "ThrowInteraction",
+        [3] = "ThrowInteractionInitialRequest",
+        [4] = {
+            ["mapC"] = "Epic_Park",
+            ["catchingPlayer"] = player.UserId,
+            ["throwingPlayer"] = 5101959777,
+            ["throwDistance"] = 4.142333166503906,
+            ["propId"] = math.random(2,100)
+        }
+    }
+
+    game:GetService("ReplicatedStorage").AskRequestPlayerInteraction:FireServer(unpack(args))
+    				wait(0.001)
+end
+ end
+
+local Button = MainTab:CreateButton({
    Name = "GACHA ONLINE CHAT ERROR (EVERYONE SEES) (OP)",
    Callback = function()
     local args={
