@@ -387,6 +387,26 @@ end
 })
 
 local Button = MainTab:CreateButton({
+   Name = "Spam give items to every player",
+   Callback = function()
+    						while true do
+local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+    local args = {
+        [1] = player.UserId,
+        [2] = "Prop",
+        [3] = "tempundefinedfuncname"
+    }
+
+    game:GetService("ReplicatedStorage").AskRequestPlayerInteraction:FireServer(unpack(args))
+    wait(0.0001)
+    				end
+end
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "throw random props at people",
    Callback = function()
     					while true do
