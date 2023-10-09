@@ -386,7 +386,10 @@ end
    end,
 })
 
-					while true do
+local Button = MainTab:CreateButton({
+   Name = "throw random props at people",
+   Callback = function()
+    					while true do
  local players = game:GetService("Players"):GetPlayers()
 
 for _, player in ipairs(players) do
@@ -407,6 +410,8 @@ for _, player in ipairs(players) do
     				wait(0.001)
 end
  end
+   end,
+})
 
 local Button = MainTab:CreateButton({
    Name = "GACHA ONLINE CHAT ERROR (EVERYONE SEES) (OP)",
