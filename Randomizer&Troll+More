@@ -427,6 +427,29 @@ end
 })
 
 local Button = MainTab:CreateButton({
+   Name = "Twerk",
+   Callback = function()
+     while true do
+  local args={
+    [1]="idle_leanin",
+    [2]="idle"
+  }
+  
+  game:GetService("ReplicatedStorage"):WaitForChild("ServerChangeAnim"):FireServer(unpack(args))
+  wait(0.05)
+  
+  local args={
+    [1]="idle_sad",
+    [2]="idle"
+  }
+  
+  game:GetService("ReplicatedStorage"):WaitForChild("ServerChangeAnim"):FireServer(unpack(args))
+  wait(0.00001)
+end
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "Randomize Shirt",
    Callback = function()
       while true do
@@ -13272,6 +13295,13 @@ task.spawn(function()
 	minimizeHolder()
 	if IsOnMobile then notify("Unstable Device", "On mobile, Infinite Yield may have issues or features that are not functioning correctly.") end
 end)
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Simple Spy (For developers)",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/SimpleSpySource.lua"))()
    end,
 })
 
