@@ -1,46 +1,3 @@
- wait(2.5)
-  local args={
-    [1]="🅶 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _",
-    [2]="All"
-  }
-  
-  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-  
-  
-  local args={
-    [1]="[🅰 Gacha Online Troll script by 12slash25 on scriptblox",
-    [2]="All"
-  }
-  
-  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-  
-    local args={
-    [1]="[🅲 Some randomizers hidden on client to prevent lag.",
-    [2]="All"
-  }
-  
-  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-  
-    local args={
-    [1]="[🅷 Use an alt to see all features from a different client.",
-    [2]="All"
-  }
-  
-  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-  
-    local args={
-    [1]="[🅰 enjoy!",
-    [2]="All"
-  }
-  
-  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-  
-    local args={
-    [1]="_ _ _ _ _ _ 🤖 _ _ _ _ _ _ _ _ _",
-    [2]="All"
-  }
-  
-  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
@@ -145,6 +102,212 @@ local Button = MainTab:CreateButton({
   
   game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
   
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Make unanchor float",
+   Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/MHdBcJQL", true))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Random direction flying objects",
+   Callback = function()
+    	spawn(function()
+	while true do
+		game.Players.LocalPlayer.MaximumSimulationRadius = math.pow(math.huge,math.huge)*math.huge
+		game.Players.LocalPlayer.SimulationRadius = math.pow(math.huge,math.huge)*math.huge
+		game:GetService("RunService").Stepped:wait()
+	end
+end)
+local function zeroGrav(part)
+    if part:FindFirstChild("BodyForce") then return end
+    local temp = Instance.new("BodyForce")
+    temp.Force = part:GetMass() * Vector3.new(math.random(-15,15),workspace.Gravity,math.random(-15,15))
+    temp.Parent = part
+end
+
+for i,v in ipairs(workspace:GetDescendants()) do
+    if v:IsA("Part") and v.Anchored == false then
+        if not (v:IsDescendantOf(game.Players.LocalPlayer.Character)) then
+            zeroGrav(v)
+        end
+    end
+end
+
+workspace.DescendantAdded:Connect(function(part)
+    if part:IsA("Part") and part.Anchored == false then
+        if not (part:IsDescendantOf(game.Players.LocalPlayer.Character)) then
+            zeroGrav(part)
+        end
+    end
+end)
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Random direction flying objects but faster",
+   Callback = function()
+    	spawn(function()
+	while true do
+		game.Players.LocalPlayer.MaximumSimulationRadius = math.pow(math.huge,math.huge)*math.huge
+		game.Players.LocalPlayer.SimulationRadius = math.pow(math.huge,math.huge)*math.huge
+		game:GetService("RunService").Stepped:wait()
+	end
+end)
+local function zeroGrav(part)
+    if part:FindFirstChild("BodyForce") then return end
+    local temp = Instance.new("BodyForce")
+    temp.Force = part:GetMass() * Vector3.new(math.random(-15,15),workspace.Gravity,math.random(-2000,2000))
+    temp.Parent = part
+end
+
+for i,v in ipairs(workspace:GetDescendants()) do
+    if v:IsA("Part") and v.Anchored == false then
+        if not (v:IsDescendantOf(game.Players.LocalPlayer.Character)) then
+            zeroGrav(v)
+        end
+    end
+end
+
+workspace.DescendantAdded:Connect(function(part)
+    if part:IsA("Part") and part.Anchored == false then
+        if not (part:IsDescendantOf(game.Players.LocalPlayer.Character)) then
+            zeroGrav(part)
+        end
+    end
+end)
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Spam drop cats",
+   Callback = function()
+    while true do
+  local dropCount = 2
+  
+  for i = 1, dropCount do
+    local args = {
+      [1] = {
+        ["itemId"] = 12724
+      }
+    }
+  
+    game:GetService("ReplicatedStorage"):WaitForChild("AskDoPlayerDropItem"):FireServer(unpack(args))
+  
+    local args = {
+      [1] = "Prop",
+      [2] = 1,
+      [3] = true,
+      [4] = true
+    }
+  
+    game:GetService("ReplicatedStorage"):WaitForChild("ChangeAssetEvent"):FireServer(unpack(args))
+  
+    local args = {
+      [1] = "Prop",
+      [2] = 12724
+    }
+  
+    game:GetService("ReplicatedStorage"):WaitForChild("ChangeAssetEvent"):FireServer(unpack(args))
+  end
+  
+  wait(0.0001)
+end
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Kick player (they need to attach to you, rarely works)",
+   Callback = function()
+    local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(80,119,-6)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+wait(0.1)
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-10,5,-108)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.4)
+pl.CFrame = location
+wait(2)
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-66,4,-141)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+wait(0.5)
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(79,123,-103)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Randomize boy and girl names from google",
+   Callback = function()
+    				while true do
+local names = {
+   "Jack",
+   "Alison",
+   "Carter",
+   "Ace",
+   "Lewis",
+   "Anthony",
+   "Robin",
+   "Lee",
+   "Ethan",
+   "Michael",
+   "Blake",
+   "Amelia",
+   "Ava",
+   "Liam",
+   "Henry",
+   "Lucas",
+   "Theodore",
+   "Ben",
+   "Kai",
+   "Lucy",
+   "Finn",
+   "Nova",
+   "Jayden",
+   "Mia",
+   "Remi",
+   "Mila",
+   "Ivy",
+   "Rachel",
+   "Molly",
+   "Axel",
+   "Alex",
+   "Jade",
+   "Everestt",
+   "Ira",
+   "Charlie",
+   -- Add more names here
+}
+
+local randomName = names[math.random(1, #names)]
+
+local args = {
+    [1] = "RPName",
+    [2] = randomName
+}
+
+game:GetService("ReplicatedStorage").ServerFilterText:InvokeServer(unpack(args))
+				wait(0.001)
+end
    end,
 })
 
@@ -640,7 +803,7 @@ local Button = MainTab:CreateButton({
    Name = "GACHA ONLINE CHAT ERROR (EVERYONE SEES) (OP)",
    Callback = function()
     local args={
-    [1]=" ",
+    [1]=" ",
     [2]="All"
   }
   
@@ -654,21 +817,21 @@ local Button = MainTab:CreateButton({
   game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
   
   local args={
-    [1]=" ",
+    [1]=" ",
     [2]="All"
   }
   
   game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
   wait(2)
   local args={
-    [1]=" ",
+    [1]=" ",
     [2]="All"
   }
   
   game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
   
   local args={
-    [1]=" ",
+    [1]=" ",
     [2]="All"
   }
   
@@ -700,6 +863,38 @@ local Button = MainTab:CreateButton({
   game:GetService("ReplicatedStorage").ServerFilterText:InvokeServer(unpack(args))
   wait(0.00001)
 end
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "I still see your shadows in my room (Not by me.)",
+   Callback = function()
+     -- // Dependencies
+local SongModule = loadstring(game:HttpGet("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Universal/SongLyrics/Module.lua"))()
+
+-- // Configuration
+local Artist = "Juice WRLD"
+local Title = "Lucid Dreams"
+local Delay = 2.25
+
+-- // Chat each lyric
+SongModule.ChatLyrics(Artist, Title, Delay)
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "California gurls (Not by me.)",
+   Callback = function()
+     -- // Dependencies
+local SongModule = loadstring(game:HttpGet("https://raw.githubusercontent.com/GitHubTestei/GachaOnline/main/NOT%20MINE%2C%20LYRIC%20SING"))()
+
+-- // Configuration
+local Artist = "Katy Perry & Snoop Dog"
+local Title = "California Gurls"
+local Delay = 2.25
+
+-- // Chat each lyric
+SongModule.ChatLyrics(Artist, Title, Delay)
    end,
 })
 
@@ -755,6 +950,171 @@ local Button = MainTab:CreateButton({
   game:GetService("ReplicatedStorage").BulkChangeAssetEvent:FireServer(unpack(args))
   wait(0.0001)
 end
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "invisibility (reset after done, e to toggle)",
+   Callback = function()
+      --[[Invisibility Toggle
+
+You can find the orginal concept here: https://v3rmillion.net/showthread.php?tid=544634
+
+This method clones the character locally, teleports the real character to a safe location, then sets the character to the clone.
+Basically, your real character is in the sky while you are on the ground.
+
+
+Because of the way this works, games with a decent anti-cheat will fck this up.
+If you turn it off, you have to go to a safe place before going invisible.
+
+Written by: BitingTheDust ; https://v3rmillion.net/member.php?action=profile&uid=1628149
+]]
+--Settings:
+local ScriptStarted = false
+local Keybind = "E" --Set to whatever you want, has to be the name of a KeyCode Enum.
+local Transparency = true --Will make you slightly transparent when you are invisible. No reason to disable.
+local NoClip = false --Will make your fake character no clip.
+
+local Player = game:GetService("Players").LocalPlayer
+local RealCharacter = Player.Character or Player.CharacterAdded:Wait()
+
+local IsInvisible = false
+
+RealCharacter.Archivable = true
+local FakeCharacter = RealCharacter:Clone()
+local Part
+Part = Instance.new("Part", workspace)
+Part.Anchored = true
+Part.Size = Vector3.new(200, 1, 200)
+Part.CFrame = CFrame.new(0, -500, 0) --Set this to whatever you want, just far away from the map.
+Part.CanCollide = true
+FakeCharacter.Parent = workspace
+FakeCharacter.HumanoidRootPart.CFrame = Part.CFrame * CFrame.new(0, 5, 0)
+
+for i, v in pairs(RealCharacter:GetChildren()) do
+  if v:IsA("LocalScript") then
+      local clone = v:Clone()
+      clone.Disabled = true
+      clone.Parent = FakeCharacter
+  end
+end
+if Transparency then
+  for i, v in pairs(FakeCharacter:GetDescendants()) do
+      if v:IsA("BasePart") then
+          v.Transparency = 0.7
+      end
+  end
+end
+local CanInvis = true
+function RealCharacterDied()
+  CanInvis = false
+  RealCharacter:Destroy()
+  RealCharacter = Player.Character
+  CanInvis = true
+  isinvisible = false
+  FakeCharacter:Destroy()
+  workspace.CurrentCamera.CameraSubject = RealCharacter.Humanoid
+
+  RealCharacter.Archivable = true
+  FakeCharacter = RealCharacter:Clone()
+  Part:Destroy()
+  Part = Instance.new("Part", workspace)
+  Part.Anchored = true
+  Part.Size = Vector3.new(200, 1, 200)
+  Part.CFrame = CFrame.new(9999, 9999, 9999) --Set this to whatever you want, just far away from the map.
+  Part.CanCollide = true
+  FakeCharacter.Parent = workspace
+  FakeCharacter.HumanoidRootPart.CFrame = Part.CFrame * CFrame.new(0, 5, 0)
+
+  for i, v in pairs(RealCharacter:GetChildren()) do
+      if v:IsA("LocalScript") then
+          local clone = v:Clone()
+          clone.Disabled = true
+          clone.Parent = FakeCharacter
+      end
+  end
+  if Transparency then
+      for i, v in pairs(FakeCharacter:GetDescendants()) do
+          if v:IsA("BasePart") then
+              v.Transparency = 0.7
+          end
+      end
+  end
+ RealCharacter.Humanoid.Died:Connect(function()
+ RealCharacter:Destroy()
+ FakeCharacter:Destroy()
+ end)
+ Player.CharacterAppearanceLoaded:Connect(RealCharacterDied)
+end
+RealCharacter.Humanoid.Died:Connect(function()
+ RealCharacter:Destroy()
+ FakeCharacter:Destroy()
+ end)
+Player.CharacterAppearanceLoaded:Connect(RealCharacterDied)
+local PseudoAnchor
+game:GetService "RunService".RenderStepped:Connect(
+  function()
+      if PseudoAnchor ~= nil then
+          PseudoAnchor.CFrame = Part.CFrame * CFrame.new(0, 5, 0)
+      end
+       if NoClip then
+      FakeCharacter.Humanoid:ChangeState(11)
+       end
+  end
+)
+
+PseudoAnchor = FakeCharacter.HumanoidRootPart
+local function Invisible()
+  if IsInvisible == false then
+      local StoredCF = RealCharacter.HumanoidRootPart.CFrame
+      RealCharacter.HumanoidRootPart.CFrame = FakeCharacter.HumanoidRootPart.CFrame
+      FakeCharacter.HumanoidRootPart.CFrame = StoredCF
+      RealCharacter.Humanoid:UnequipTools()
+      Player.Character = FakeCharacter
+      workspace.CurrentCamera.CameraSubject = FakeCharacter.Humanoid
+      PseudoAnchor = RealCharacter.HumanoidRootPart
+      for i, v in pairs(FakeCharacter:GetChildren()) do
+          if v:IsA("LocalScript") then
+              v.Disabled = false
+          end
+      end
+
+      IsInvisible = true
+  else
+      local StoredCF = FakeCharacter.HumanoidRootPart.CFrame
+      FakeCharacter.HumanoidRootPart.CFrame = RealCharacter.HumanoidRootPart.CFrame
+     
+      RealCharacter.HumanoidRootPart.CFrame = StoredCF
+     
+      FakeCharacter.Humanoid:UnequipTools()
+      Player.Character = RealCharacter
+      workspace.CurrentCamera.CameraSubject = RealCharacter.Humanoid
+      PseudoAnchor = FakeCharacter.HumanoidRootPart
+      for i, v in pairs(FakeCharacter:GetChildren()) do
+          if v:IsA("LocalScript") then
+              v.Disabled = true
+          end
+      end
+      IsInvisible = false
+  end
+end
+
+game:GetService("UserInputService").InputBegan:Connect(
+  function(key, gamep)
+      if gamep then
+          return
+      end
+      if key.KeyCode.Name:lower() == Keybind:lower() and CanInvis and RealCharacter and FakeCharacter then
+          if RealCharacter:FindFirstChild("HumanoidRootPart") and FakeCharacter:FindFirstChild("HumanoidRootPart") then
+              Invisible()
+          end
+      end
+  end
+)
+local Sound = Instance.new("Sound",game:GetService("SoundService"))
+Sound.SoundId = "rbxassetid://232127604"
+Sound:Play()
+game:GetService("StarterGui"):SetCore("SendNotification",{["Title"] = "Invisible Toggle Loaded",["Text"] = "Press "..Keybind.." to become change visibility.",["Duration"] = 20,["Button1"] = "Okay."})
    end,
 })
 
