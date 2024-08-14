@@ -1,0 +1,29 @@
+-- Function to load and execute a script from a URL
+local function executeScript(url)
+    local success, result = pcall(function()
+        return loadstring(game:HttpGet(url))()
+    end)
+    if not success then
+        warn("Failed to load or execute script from " .. url .. ": " .. result)
+    end
+end
+
+-- Function to execute scripts with a delay between each
+local function executeScriptsWithDelay(urls, delay)
+    for _, url in ipairs(urls) do
+        spawn(function()
+            executeScript(url)
+        end)
+        wait(delay)  -- Wait for the specified delay before executing the next script
+    end
+end
+
+-- URLs of the scripts to be executed
+local urls = {
+    "https://raw.githubusercontent.com/GitHubTestei/GachaOnline/main/Rainbow2",
+    "https://pastebin.com/raw/QaViMSeA",
+    "https://raw.githubusercontent.com/GitHubTestei/GachaOnline/main/test1"
+}
+
+-- Execute scripts with a 0.7 second delay between each
+executeScriptsWithDelay(urls, 0.7)
