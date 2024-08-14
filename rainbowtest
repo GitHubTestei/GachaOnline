@@ -1,0 +1,36 @@
+-- Function to load and execute a script from a URL
+local function executeScript(url)
+    local success, result = pcall(function()
+        return loadstring(game:HttpGet(url))()
+    end)
+    if not success then
+        warn("Failed to load or execute script from " .. url .. ": " .. result)
+    end
+end
+
+-- Function to execute scripts with a delay between each
+local function executeScriptsWithDelay(urls, delay)
+    for _, url in ipairs(urls) do
+        spawn(function()
+            executeScript(url)
+        end)
+        wait(delay)  -- Wait for the specified delay before executing the next script
+    end
+end
+
+-- URLs of the scripts to be executed
+local urls = {
+    "https://pastebin.com/raw/rskp8te7", -- Rainbow skin
+    "https://pastebin.com/raw/e6mEifEN", -- Rainbow pants
+    "https://pastebin.com/raw/d9Lf95BK", -- Rainbow hair
+    "https://pastebin.com/raw/x6tqWdhW", -- Rainbow left eye 2
+    "https://pastebin.com/raw/YcZbpS8P", -- Rainbow right eye 2
+    "https://pastebin.com/raw/6cEBYX57", -- Rainbow skin outline
+    "https://pastebin.com/raw/Eunmw6Ax", -- Rainbow back hair
+    "https://pastebin.com/raw/dNU6ZUv1", -- Rainbow calves
+    "https://pastebin.com/raw/2NbbPqCX", -- Rainbow right eye
+    "https://pastebin.com/raw/WwfD3F9E" -- Rainbow left eye
+}
+
+-- Execute scripts with a 0.5 second delay between each
+executeScriptsWithDelay(urls, 0.5)
