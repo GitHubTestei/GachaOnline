@@ -25,5 +25,5 @@ local urls = {
     "https://raw.githubusercontent.com/GitHubTestei/GachaOnline/main/test1"
 }
 
--- Execute scripts with a 0.7 second delay between each
-executeScriptsWithDelay(urls, 0.7)
+-- Execute scripts with a 0.9 second delay between each
+executeScriptsWithDelay(urls, 0.9)
